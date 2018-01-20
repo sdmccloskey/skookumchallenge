@@ -1,2 +1,14 @@
-<h1>Books#index</h1>
-<p>Find me in app/views/books/index.html.erb</p>
+<h1>All Books</h1>
+
+
+<% @books.each do |books|  %>
+
+<h3> Title: <%= link_to books['title'], books_path(books['id']) %></h3>
+
+<h4> Author: <%= link_to books['author'], books_path(books['id']) %></h4>
+
+<h4> Year: <%= link_to books['year'], books_path(books['id']) %></h4>
+
+<h4> ISBN: <%= link_to books['isbn'], books_path(books['id']) %></h4>
+
+<% end %>
