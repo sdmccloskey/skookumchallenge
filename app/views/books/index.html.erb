@@ -1,14 +1,13 @@
-<h1>All Books</h1>
+<h1>Bookshelf</h1>
 
 
-<% @books.each do |books|  %>
+<% @books.each do |book|  %>
+<h3> Title: <%= link_to book['title'], book_path(book['title'].gsub(' ', '-')) %></h3>
 
-<h3> Title: <%= link_to books['title'], books_path(books['id']) %></h3>
+<h4> Author: <%=book['author']%></h4>
 
-<h4> Author: <%= link_to books['author'], books_path(books['id']) %></h4>
+<h4> Year: <%=book['year']%></h4>
 
-<h4> Year: <%= link_to books['year'], books_path(books['id']) %></h4>
-
-<h4> ISBN: <%= link_to books['isbn'], books_path(books['id']) %></h4>
+<h4> ISBN: <%=book['isbn']%></h4>
 
 <% end %>
