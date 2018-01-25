@@ -2,7 +2,7 @@
 
 
 
-<h3>Title:<%= @book["title"] %></h3>
+<h2>Title:<%= @book["title"] %></h2>
 
 <h3>Author: <%= @book['author'] %></h3>
 
@@ -10,4 +10,10 @@
 
 <h3>ISBN: <%= @book['isbn'] %></h3>
 
+<%= image_tag("http://covers.librarything.com/devkey/767a791c0e42bac7dc8892ce714a7322/large/isbn/#{@book['isbn']}") %>
+
+
 </hr>
+<br>
+
+<%= link_to 'Back to Bookshelf',(:books) %>

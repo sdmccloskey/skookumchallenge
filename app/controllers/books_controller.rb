@@ -3,6 +3,7 @@ class BooksController < ApplicationController
 
     def index
       fetch_books
+
     end
 
     def show
@@ -24,5 +25,9 @@ class BooksController < ApplicationController
       book['title'].include?(params['title'].gsub('-',' '))
     end
   end
+
+
+
+
 
 end
