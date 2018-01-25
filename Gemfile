@@ -36,7 +36,8 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 gem 'rest-client', '~> 2.0', '>= 2.0.2'
 gem 'rack-cors', :require => 'rack/cors'
-
+gem 'materialize-sass'
+gem 'jquery-turbolinks'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
