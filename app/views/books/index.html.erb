@@ -1,25 +1,28 @@
 
-
-
-
-<h1>Bookshelf</h1>
-
-
-
-
-
-
-
 <% @books.each do |book|  %>
 
-<h3> Title: <%= link_to book['title'], book_path(book['title'].gsub(' ', '-')) %></h3>
+  <div class="col s12 m4">
 
-<h4> Author: <%=book['author']%></h4>
+    <div class="card horizontal">
+      <div class="card-image">
+        <%= image_tag("http://covers.librarything.com/devkey/767a791c0e42bac7dc8892ce714a7322/medium/isbn/#{book['isbn']}") %>
+      </div>
+      <div class="card-stacked">
+        <div class="card-content">
+          <h6 class="header"><%= link_to book['title'], book_path(book['title'].gsub(' ', '-')) %></h6>
 
-<h4> Year: <%=book['year']%></h4>
+          <h6> Author: <%=book['author']%></h6>
 
-<h4> ISBN: <%=book['isbn']%></h4>
+          <h6> Year: <%=book['year']%></h6>
 
-<%= image_tag("http://covers.librarything.com/devkey/767a791c0e42bac7dc8892ce714a7322/large/isbn/#{book['isbn']}") %>
+          <h6> ISBN: <%=book['isbn']%></h6>
+        </div>
+        <div class="card-action">
+          <%= link_to "View Book", book_path(book['title'].gsub(' ', '-')) %>
+        </div>
+      </div>
+    </div>
+  </div>
 
-<% end %>
+
+  <% end %>
